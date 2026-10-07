@@ -198,7 +198,7 @@ MIT，见 [LICENSE](LICENSE)。
 
 ### 本项目基于 AI 开发
 
-**本项目的全部代码（Host 半 `index.js` 与 Client 半 `client.js`）由 AI 编写，全程 Vibe Coding，没有人工手写源码。** 插件架构、界面设计、宿主契约的核实与多轮调试均由 AI 完成。
+**本项目的全部代码（Host 半 `index.js` 与 Client 半 `client.js`）由 AI 编写，全程 Vibe Coding 完成，没有人工手写源码。** 插件架构、界面设计、宿主契约的核实与多轮调试均由 AI 完成。
 
 写作语言为 [Claude Code](https://github.com/anthropics/claude-code)（Opus 4.6）。
 
