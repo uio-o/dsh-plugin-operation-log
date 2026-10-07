@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Operation Log",
+    "description": "Tracks Skill / MCP calls and file changes per turn and step, with honest unknown-data labeling."
+  }
+}

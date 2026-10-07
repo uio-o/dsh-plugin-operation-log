@@ -1,0 +1,4 @@
+- insert:
+    - id: operation-log
+      name: 'dsh-plugin-operation-log'
+      config: {}
