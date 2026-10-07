@@ -10,44 +10,23 @@
 
 ## 安装
 
-### 方式一：装进 profile（推荐）
-
-本插件以 `link:` 形式随 profile 的 `package.json` 安装，DSH 直接读你的源码目录，改完即生效。
+在你的 **profile 目录**（`~/.dsh/profiles/<profile>/`）的 `package.json` 里加一行依赖、一行 bundle：
 
 ```json
-{
-  "name": "dsh-profile-yourprofile",
-  "dependencies": {
-    "dsh-plugin-operation-log": "link:D:/path/to/dsh-plugin-operation-log"
-  },
-  "dsh": {
-    "profile": {
-      "bundles": [ "dsh-plugin-operation-log" ]
-    }
-  }
-}
+"dependencies": { "dsh-plugin-operation-log": "github:uio-o/dsh-plugin-operation-log" },
+"dsh": { "profile": { "bundles": [ "dsh-plugin-operation-log" ] } }
 ```
 
-改完这两处后在 profile 目录跑一次 `pnpm install`，**重启 DSH** 后启用。
+跑 `pnpm install`，**重启 DSH**。会话头部右侧出现「操作日志」按钮，点击即在右侧边栏打开面板。
 
 > <details>
-> <summary>方式二：GitHub tarball（次选）</summary>
+> <summary>本地开发：用 link: 指向源码目录</summary>
 >
-> ```powershell
-> $p = "<你的 profile 目录>"
-> Copy-Item "$p\package.json" "$p\package.json.bak" -Force
-> # 下载并解包到 node_modules
-> Invoke-WebRequest "https://github.com/uio-o/dsh-plugin-operation-log/archive/refs/heads/main.tar.gz" -OutFile "$env:TEMP\opl.tar.gz"
-> tar -xzf "$env:TEMP\opl.tar.gz" -C "$env:TEMP"
-> $dst = "$p\node_modules\dsh-plugin-operation-log"
-> Move-Item "$env:TEMP\dsh-plugin-operation-log-main" $dst -Force
-> # 在 package.json 的 dependencies 与 dsh.profile.bundles 两处各加一行 "dsh-plugin-operation-log"
+> ```json
+> "dependencies": { "dsh-plugin-operation-log": "link:D:/path/to/dsh-plugin-operation-log" }
 > ```
->
-> tarball 方式装的是**拷贝**不是链接，升级需手动重新拷贝。
 > </details>
 
-装完后会话头部右侧会出现「操作日志」按钮，点击即在右侧边栏打开本面板。
 
 ### 前置条件
 
@@ -219,7 +198,7 @@ MIT，见 [LICENSE](LICENSE)。
 
 ### 本项目基于 AI 开发
 
-**本项目的全部代码（Host 半 `index.js` 与 Client 半 `client.js`）由 AI 编写，全程 Web Coding 完成，没有人工手写源码。** 插件架构、界面设计、宿主契约的核实与多轮调试均由 AI 完成。
+**本项目的全部代码（Host 半 `index.js` 与 Client 半 `client.js`）由 AI 编写，全程 Vibe Coding，没有人工手写源码。** 插件架构、界面设计、宿主契约的核实与多轮调试均由 AI 完成。
 
 写作语言为 [Claude Code](https://github.com/anthropics/claude-code)（Opus 4.6）。
 
