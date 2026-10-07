@@ -217,6 +217,12 @@ node <你保存的路径>\dsh-oplog-verify-client.mjs
 
 MIT，见 [LICENSE](LICENSE)。
 
+### 本项目基于 AI 开发
+
+**本项目的全部代码（Host 半 `index.js` 与 Client 半 `client.js`）由 AI 编写，全程 Web Coding 完成，没有人工手写源码。** 插件架构、界面设计、宿主契约的核实与多轮调试均由 AI 完成。
+
+写作语言为 [Claude Code](https://github.com/anthropics/claude-code)（Opus 4.6）。
+
 本插件是**衍生作品**：视觉结构借鉴了 [Abu](https://www.myabu.cn/)（`PM-Shawn/Abu-Cowork`）的设计语言——暖中性表面分层、发丝分隔线、柔和着色芯片、圆角图标块、「图标 + 标题 + 灰字计数 + 折叠箭头」的分区头、`grid-template-rows` 的展开收起过渡。
 
 实现上未使用 Abu 的任何代码：其样式变量基于 Tailwind/shadcn 自己的设计 token，而本插件全部改用 DSH 的主题 token（`--dsw-alias-*`）与 `color-mix()` 重新表达。若原作者认为署名方式不妥，请开 issue，我会调整。
