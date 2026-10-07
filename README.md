@@ -19,6 +19,12 @@
 
 跑 `pnpm install`，**重启 DSH**。会话头部右侧出现「操作日志」按钮，点击即在右侧边栏打开面板。
 
+**锁定版本**（不跟 main 滚动，装到即固定）：
+
+```json
+"dependencies": { "dsh-plugin-operation-log": "github:uio-o/dsh-plugin-operation-log#v0.1.0" }
+```
+
 > <details>
 > <summary>本地开发：用 link: 指向源码目录</summary>
 >
