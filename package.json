@@ -4,7 +4,13 @@
   "private": true,
   "type": "module",
   "description": "按会话/轮次/步骤统计 Skill 调用、MCP 调用与文件变动，诚实区分已知与未知数据。",
+  "license": "MIT",
   "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uio-o/dsh-plugin-operation-log.git"
+  },
+  "homepage": "https://github.com/uio-o/dsh-plugin-operation-log",
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
